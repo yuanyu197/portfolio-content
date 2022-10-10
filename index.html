@@ -1,42 +1,69 @@
-
 <!DOCTYPE html>
 <html lang="en">
+<!-- All of the meta data for the page belongs in the header tag -->
 <head>
-<title>Homepage</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <!-- page-header -->
+   <header class="page-header"></header>
+   <!-- end of page header -->
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Home</title>
 </head>
+
 <body>
+	<header id='header'>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="cat.html">Cat</a></li>
+				<li><a href="baking.html">Baking</a></li>
+			</ul>
+		</nav>		
+	</header>
 
-<header>
-  <h1>About Me</h1>
-</header>
-<section>
-  <nav>
-    <ul>
-      <li><a href="project1.html">Project1</a></li>
-      <li><a href="project2.html">Project2</a></li>
-      <li><a href="project3.html">Project3</a></li>
-    </ul>
-  </nav>
-</section>
+	<main>
+		<h1>Welcome to Yuan Yu's Garden</h1>
 
-<main>
-    <p>Hi! My name is Yuan Yu. I like to explore this beautiful word. Everytime I arrive at a new place, I will take a few photos
-		to record its unique views.
-    </p>
-    <h2> Photography Work </h2>
-    <img src="images/IMG_8305.png" alt="">
-    <img src="images/IMG_8307.png" alt="">
-    <img src="images/IMG_8311.png" alt="">
-    <img src="images/IMG_8313.png" alt="">
-    <img src="images/IMG_8323.png" alt="">
-    <img src="images/IMG_8387.png" alt="">
-    <img src="images/IMG_8656.png" alt="">
-    <img src="images/IMG_8659.png" alt="">
-    <img src="images/IMG_8683.png" alt="">
-</main>
-<footer>
-  <p>Footer</p>
-</footer>
+		<div id="container">
+			<div class='images'>
+				<figure>
+					<img src="images/home1.jpg" alt="Home" width="500"/>
+				</figure>
+				<h2>Computer Skills</h2>
+				<p>
+					Python, C, SQL, Django, Flask, React, PyTorch, Git/GitHub
+				</p>
+			</div>
 
+
+			<div class='images'>
+				<figure>
+					<img src="images/home2.png" alt="Home" width="500"/>
+				</figure>
+				<h2>My Courses</h2>
+				<p>
+					Mainly take courses at EECS(Electrical and Computer Science Department) and SI(School of Information)
+				</p>
+			</div>
+
+
+			<div class='images'>
+				<figure>
+					<img src="images/home3.jpg" alt="Home" width="500"/>
+				</figure>
+				<h2>Projects</h2>
+				<p>
+				  Cover HTML/CSS, Python, Django, React.
+				</p>				
+			</div>
+		</div>
+		
+	</main>
+
+	<footer>
+		&copy; Yuan Yu2022
+	</footer>
 </body>
 </html>
