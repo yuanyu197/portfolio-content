@@ -5,13 +5,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	 <!-- page-header -->
-   <header class="page-header"></header>
-   <!-- end of page header -->
-	<link rel="stylesheet" href="css/styles.css">
-	<title>Home</title>
+       <header class="page-header"></header>
+   
+	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+	<link rel="stylesheet" type="text/css" href="css/html5reset.css"/>
+	<link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"/>
+	
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Space+Mono&display=swap" rel="stylesheet">
+	<title class="animate box">
+		<span>Home</span>
+	</title>
 </head>
 
-<body>
+<body class="container">
 	<header id='header'>
 		<nav>
 			<ul>
@@ -24,14 +30,16 @@
 	</header>
 
 	<main>
-		<h1>Welcome to Yuan Yu's Garden</h1>
-
-		<div id="container">
+		
+		<h1 class="head1">Welcome to Yuan Yu's Garden</h1>
+	
+		
 			<div class='images'>
 				<figure>
 					<img src="images/home1.jpg" alt="Home" width="500"/>
 				</figure>
-				<h2>Computer Skills</h2>
+				
+				<h2 class="head2">Programming Skills</h2>
 				<p>
 					Python, C, SQL, Django, Flask, React, PyTorch, Git/GitHub
 				</p>
@@ -42,7 +50,7 @@
 				<figure>
 					<img src="images/home2.png" alt="Home" width="500"/>
 				</figure>
-				<h2>My Courses</h2>
+				<h2 class="head2">My Courses</h2>
 				<p>
 					Mainly take courses at EECS(Electrical and Computer Science Department) and SI(School of Information)
 				</p>
@@ -53,17 +61,29 @@
 				<figure>
 					<img src="images/home3.jpg" alt="Home" width="500"/>
 				</figure>
-				<h2>Projects</h2>
+				<h2 class="head2">Projects</h2>
 				<p>
 				  Cover HTML/CSS, Python, Django, React.
 				</p>				
 			</div>
-		</div>
+		
 		
 	</main>
+	<aside>
+		<p>My graduate life!</p>
+	</aside>
 
 	<footer>
-		&copy; Yuan Yu2022
+		<h3>
+			&copy; <span id="displayYear">Yuan Yu2022</span>
+			<br>
+			<!--Regular Icon -->
+			<span class="user fontawesomeicon"> yuanyu@umich.edu</span>
+			<br>
+			<!--Solid Icon -->
+			<span class="cloud fontawesomeicon"> portfolio!</span>
+		</h3>
+		
 	</footer>
 </body>
 </html>

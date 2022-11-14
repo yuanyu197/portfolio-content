@@ -3,29 +3,75 @@ html{
 }
 
 body{
-  background-color: #ddd;
-  font-size: 18px;
-  margin: 0;
+  background-color: #fff;
   padding: 0;
-}
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../images/background.jpg);
 
+}
+.container{
+  min-width: 500px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, auto);
+  gap: 20px;
+}
+.head1{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 60px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+  background-color: transparent;
+}
+.head2{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 32px;
+  line-height: 1.5;
+  text-align: center;
+}
 h1{
   background-color: transparent;
-  font-size: 50px;
+  font-size: 60px;
   line-height: 1;
   padding: 50px 0;
   text-align: center;
 }
 
+
 h2{
   font-size: 32px;
   line-height: 1.5;
   text-align: center;
+  
+}
+
+p {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 nav li{
   display:inline;
   padding-right:20px;
+  font-family: 'Lobster', cursive;
+  font-size: 60px;
 
 }
 
@@ -61,23 +107,81 @@ nav a:hover{
   position: absolute;
 }
 
-/*Your code here*/
-/*reference: http://nemesisdesign.net/blog/accessibility/nice-css-skip-links-appearing-focus/*/
-/*Add the selector and rule to move the skip
-link to the exact top of the page.*/
-
-/*Your code here*/
-/*Add the selector and code to put a 2px black
-border around all elements in focus.*/
 
 footer{
-  background-color: black;
+  background-color: white;
   color: white;
-  grid-column: 1 / -1;
-  grid-row: 7 / auto;
+  /* grid-column: 1 / -1;
+  grid-row: 7 / auto; */
+  grid-column: 1/span 1;
+  grid-row: 5/span 1;
   padding-top: 30px;
   text-align: center;
 }
+footer h3 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.2;
+  font-family:'Lobster', cursive;
+}
+/* Regular Icon */
+.user::before {
+  content: '\f007';
+  font-family: "Font Awesome 6 free";
+  font-weight: 400;
+}
+
+/* Solid Icon */
+.cloud::before {
+  content: '\f0c2';
+  font-family: "Font Awesome 6 free";
+  font-weight: 900;
+}
+
+
+.fontawesomeicon {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  color: #d1deee;
+}
+
+.animate {
+  font-size: 40px;
+  margin: 0 0 0 100px;
+}
+
+.animate span {
+  display: inline-block;
+}
+
+.box span {
+  color: #FFFFFF;
+  opacity: 1;
+  transform: translate(-150px, 0) scale(.5);
+  animation: leftRight 1s forwards;
+}
+
+@keyframes leftRight {
+  40% {
+      transform: translate(30px, 0) scale(.7);
+      opacity: 1;
+      color:  #466995;
+  }
+  60% {
+      color: #87CEEB;
+  }
+  80% {
+      transform: translate(0) scale(2);
+      opacity: 0;
+  }
+  100% {
+      transform: translate(0) scale(1);
+      opacity: 1;
+  }
+}
+
 
 nav{
   background-color: #ddd;
@@ -92,22 +196,34 @@ nav{
     background-size: cover;
     height: 900px;
   }
-#header{
 
-  color: white;
-           /* Parallax effect */
-  /* Your code here */
-  /* Set background-image to header.jpg in the images folder */
-  /* Span one row */
-  height:1000px;
-  width:70%;
+.header{
+  height: 900px;
+  width:100%;
   text-align: center;
-  border: auto;
-  margin: auto;
-  padding: auto;
+  color: #fff;
+  background-size: 100% 100%;
   background-image:url("../images/header_bg.jpg");
+  grid-column: 1/span 1;
+  grid-row: 1/span 1;
+  position: relative;
+  
 }
+main{
+  grid-column: 1/span 1;
+  grid-row: 3/span 1;
+}
+aside{
+  grid-column: 1/span 1;
+  grid-row: 4/span 1;
+}
+.gallery{
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: center;
 
+}
 header p{
   display: inline-block;
   color: white;
@@ -120,7 +236,8 @@ header p{
   border: auto;
   margin: auto;
   padding: auto;
-  text-align:center
+  text-align:center;
+  
 }
 
 img{
@@ -130,44 +247,16 @@ img{
 img:hover{
   width: 70%;
 }
-#container{
-  /*Your code here  */
-  /* See documentation for mobile view */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /*grid-template-rows: 100px 100px 100px;*/
-  /*grid-row-gap: 100px;*/
-  grid-column-gap: 20px;
-}
 
-.about, .method, .clients, .contact{
-  /*Your code here */
-  /* See documentation for mobile view */
-}
-
-.about-image, .method-image, .clients-image, .contact-image{
-   /*Your code here */
-   /* See documentation for mobile view */
-}
-
-.about, .about-image{
-  /*Your code here */
-  /* See documentation for mobile view */
-}
-
-.method, .method-image{
-  /*Your code here */
-  /* See documentation for mobile view */
-}
-
-.clients, .clients-image{
-  /*Your code here */
-  /* See documentation for mobile view */
-}
-
-.contact, .contact-image{
-  /*Your code here */
-  /* See documentation for mobile view */
+aside p{
+  font-family: "Bradley Hand", cursive, Serif;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  text-align: left;
+  color: #466995;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 .text-block{
@@ -176,16 +265,18 @@ img:hover{
   padding: 30px;
   position: relative;
   margin: auto;
-  /*Your code here:*/
-  /*Align the content in the center */
-}
 
+}
+/* Applies styles when Reduced Motion is enabled */
+@media (prefers-reduced-motion:reduce) {
+  .box span {
+      animation: none !important;
+      transform: none !important;
+  }
+}
 @media all and (min-width: 800px){
 
-  .container{
-    /*Your code here */
-    /* See documentation for desktop view */
-  }
+}
 
   nav{
     background-color: #ddd;
@@ -194,23 +285,10 @@ img:hover{
     align-self: center;
   }
 
-   .about, .clients, .method-image, .contact-image {
-    /*Your code here */
-    /* See documentation for desktop view */
-  }
 
-  .method, .contact, .about-image, .clients-image {
-    /*Your code here */
-    /* See documentation for desktop view */
-  }
-}  /*End the media query*/
 
 @media screen and (prefers-reduced-motion: reduce){
   html{
     scroll-behavior: auto; /* Removes scroll animation */
   }
-
-  .skip a{
-    -webkit-transition: none;
-    transition: none;
-  }
+}
