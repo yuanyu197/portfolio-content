@@ -12,6 +12,16 @@ body{
   background-image: url(../images/background.jpg);
 
 }
+.skip-to-main-content-link {
+  background: transparent;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  font-weight: 700;
+  left: 1%;
+  padding: 4px;
+  position: absolute;
+  transform: translateY(-100%);
+}
 .container{
   min-width: 500px;
   margin: auto;
@@ -92,8 +102,6 @@ nav a:hover{
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
-  /*Your code here - position relative to the parent */
-  /*Your code here - place 500px left and 40px higher */;
 }
 
 .skip a:focus{
@@ -147,40 +155,6 @@ footer h3 {
   color: #d1deee;
 }
 
-.animate {
-  font-size: 40px;
-  margin: 0 0 0 100px;
-}
-
-.animate span {
-  display: inline-block;
-}
-
-.box span {
-  color: #FFFFFF;
-  opacity: 1;
-  transform: translate(-150px, 0) scale(.5);
-  animation: leftRight 1s forwards;
-}
-
-@keyframes leftRight {
-  40% {
-      transform: translate(30px, 0) scale(.7);
-      opacity: 1;
-      color:  #466995;
-  }
-  60% {
-      color: #87CEEB;
-  }
-  80% {
-      transform: translate(0) scale(2);
-      opacity: 0;
-  }
-  100% {
-      transform: translate(0) scale(1);
-      opacity: 1;
-  }
-}
 
 
 nav{
