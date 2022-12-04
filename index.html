@@ -2,9 +2,19 @@
 <html lang="en">
 <!-- All of the meta data for the page belongs in the header tag -->
 <head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GRD85JM22W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GRD85JM22W');
+</script>
 	<meta charset="UTF-8">
+	<title class="animate box">Home</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <div class="page-header"></div>
+   
 	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
 	<link rel="stylesheet" type="text/css" href="css/html5reset.css"/>
 	<link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"/>
@@ -13,7 +23,7 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
 	<link rel="manifest" href="favicon/site.webmanifest">
 	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Space+Mono&display=swap" rel="stylesheet">
-	<title class="animate box">Home</title>
+	<div class="page-header"></div>
 </head>
 
 <body class="container">
@@ -21,7 +31,7 @@
 	<header id='header'>
 		<nav>
 			<ul>
-				<li><a href="index.html">Home</a></li>
+				<li><a class="current" href="index.html">Home</a></li>
 				<li><a href="gallery.html">Gallery</a></li>
 				<li><a href="cat.html">Cat</a></li>
 				<li><a href="baking.html">Baking</a></li>
@@ -67,9 +77,51 @@
 				  Cover HTML/CSS, Python, Django, React.
 				</p>				
 			</div>
-		
-		
-	</main>
+	
+	</main> 
+	<form class="card" action="https://formspree.io/f/mjvznbgv" method="POST">
+		<h2>Contact Me</h2>
+		<div class="row">
+			<div class="col">
+				<div class="form-group">
+					<label for="First Name">First Name</label>
+					<input type="text" name="First Name" id="First Name">
+				</div>
+			</div>
+	
+			<div class="col">
+				<div class="form-group">
+					<label for="Last Name">Last Name</label>
+					<input type="text" name="Last Name" id="Last Name">
+				</div>
+			</div>
+	
+			<div class="col">
+				<div class="form-group">
+					<label for="Email">Email</label>
+					<input type="text" name="Email" id="Email">
+				</div>
+			</div>
+	
+			<div class="col">
+				<div class="form-group">
+					<label for="Phone">Phone</label>
+					<input type="text" name="Phone" id="Phone">
+				</div>
+			</div>
+	
+			<div class="col">
+				<div class="form-group">
+					<label for="Message">Message</label>
+					<input type="text" name="Message" id="Message">
+				</div>
+			</div>
+	
+			<div class="col">
+				<input type="submit" value="Submit" name="Submit">
+			</div>
+		</div>
+	</form>
 	<aside>
 		<p>My graduate life!</p>
 	</aside>

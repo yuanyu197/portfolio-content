@@ -2,9 +2,18 @@
 <html lang="en">
 <!-- All of the meta data for the page belongs in the header tag -->
 <head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GRD85JM22W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GRD85JM22W');
+</script>
 	<meta charset="UTF-8">
+	<title class="animate box">Gallery</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <div class="page-header"></div>
 	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
 	<link rel="stylesheet" type="text/css" href="css/html5reset.css"/>
 	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Space+Mono&display=swap" rel="stylesheet">
@@ -13,7 +22,8 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
 	<link rel="manifest" href="favicon/site.webmanifest">
-	<title class="animate box">Gallery</title>
+	<div class="page-header"></div>
+	
 </head>
 
 <body class="container">
@@ -21,7 +31,7 @@
 		<nav>
 			<ul>
 				<li><a href="index.html">Home</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
+				<li><a class="current"href="gallery.html">Gallery</a></li>
 				<li><a href="cat.html">Cat</a></li>
 				<li><a href="baking.html">Baking</a></li>
 			</ul>

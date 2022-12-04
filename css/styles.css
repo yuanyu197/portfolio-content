@@ -27,8 +27,14 @@ body{
   margin: auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(8, auto);
+  grid-template-rows: repeat(10, auto);
   gap: 20px;
+}
+.current{
+  color: #e1aabf;
+}
+a.current:hover {
+  color: #4f80ca;
 }
 .head1{
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -116,23 +122,6 @@ nav a:hover{
 }
 
 
-footer{
-  background-color: white;
-  color: white;
-  /* grid-column: 1 / -1;
-  grid-row: 7 / auto; */
-  grid-column: 1/span 1;
-  grid-row: 5/span 1;
-  padding-top: 30px;
-  text-align: center;
-}
-footer h3 {
-  text-align: center;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 1.2;
-  font-family:'Lobster', cursive;
-}
 /* Regular Icon */
 .user::before {
   content: '\f007';
@@ -191,6 +180,22 @@ aside{
   grid-column: 1/span 1;
   grid-row: 4/span 1;
 }
+
+footer{
+  background-color: black;
+  color: black;
+  grid-column: 1/span 1;
+  grid-row: 5/span 1;
+  padding-top: 30px;
+  text-align: center;
+}
+footer h3 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.2;
+  font-family:'Lobster', cursive;
+}
 .gallery{
   display: flex;
   flex-flow: row wrap;
@@ -241,17 +246,6 @@ aside p{
   margin: auto;
 
 }
-/* Applies styles when Reduced Motion is enabled */
-@media (prefers-reduced-motion:reduce) {
-  .box span {
-      animation: none !important;
-      transform: none !important;
-  }
-}
-@media all and (min-width: 800px){
-
-}
-
   nav{
     background-color: #ddd;
     text-align: right;
@@ -259,10 +253,126 @@ aside p{
     align-self: center;
   }
 
+  .card {
+    width: 70%;
+    padding: 20px;
+    border: 6px solid #466995;
+    box-shadow: 20px 20px 0 #466995;
+    border-radius: 50px;
+    position: relative;
+    grid-column: 1/span 1;
+    grid-row: 6/span 1;
+}
 
+.card h2 {
+    color: #466995;
+    font-size: 34px;
+    text-transform: uppercase;
+}
+
+.card .row {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid: auto / auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(70%, 1fr));
+    grid-gap: 30px;
+}
+
+.card .row .col {
+    position: relative;
+    width: 100%;
+    margin: 30px 20px 40px 0;
+    transition: 0.5s;
+}
+
+.card .row .form-group {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #ffffff;
+}
+
+.card .row .form-group input,
+.card .row .form-group textarea {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 10px 0 10px 20px;
+    border: 5px solid #466995;;
+    box-shadow: 10px 10px 0 #466995;;
+    color: #466995;
+    border-radius: 50px;
+}
+
+.card .row .form-group label {
+    line-height: 40px;
+    color: #466995;
+    font-size: 24px;
+    font-weight: 700;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 0 0 30px;
+    display: block;
+    pointer-events: none;
+}
+
+.row .col:nth-child(6) {
+    margin-top: 64px;
+}
+
+.card .row .form-group input:focus,
+.card .row .form-group textarea:focus {
+    border: 5px solid #ffffff;
+    transition: all 0.5s;
+}
+
+.card .row input[type="submit"] {
+    border: 5px solid #466995;;
+    box-shadow: 10px 10px 0 #466995;;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+    text-transform: uppercase;
+    color: #466995;
+    line-height: 40px;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 45px;
+    transition: all 0.4s;
+}
+
+.card .row input[type="submit"]:hover {
+    border: 5px solid rgba(255, 255, 255, 1);
+    color: #ffffff;
+    transition: all 0.4s;
+}
 
 @media screen and (prefers-reduced-motion: reduce){
   html{
     scroll-behavior: auto; /* Removes scroll animation */
   }
+}
+@media all and (min-width: 800px){
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+    grid-column: 1/span 1;
+    grid-row: 11/span 1;
+}
+
+.gallery img {
+    width: 470px;
+    height: auto;
+    margin: 10px
+}
+
 }
