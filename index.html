@@ -23,6 +23,10 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
 	<link rel="manifest" href="favicon/site.webmanifest">
 	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Space+Mono&display=swap" rel="stylesheet">
+		<!-- Load FontAwesome icons -->
+	<link rel="stylesheet"
+		href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 	<div class="page-header"></div>
 </head>
 
@@ -79,6 +83,55 @@
 			</div>
 	
 	</main> 
+<div class="music">
+
+	
+	<!-- Load the custom CSS style file -->
+	<div class="player">
+	
+		<!-- Define the section for displaying details -->
+		<div class="details">
+		<div class="track-art"></div>
+		<div class="track-name">Track Name</div>
+		<div class="track-artist">Click the next button for the song</div>
+		</div>
+	
+		<!-- Define the section for displaying track buttons -->
+		<div class="buttons">
+		<div class="prev-track" onclick="prevTrack()">
+			<i class="fa fa-step-backward fa-2x"></i>
+		</div>
+		<div class="playpause-track" onclick="playpauseTrack()">
+			<i class="fa fa-play-circle fa-5x"></i>
+		</div>
+		<div class="next-track" onclick="nextTrack()">
+			<i class="fa fa-step-forward fa-2x"></i>
+		</div>
+		</div>
+	
+		<!-- Define the section for displaying the seek slider-->
+		<div class="slider_container">
+		<div class="current-time">00:00</div>
+		<label for = "time">time</label>
+		<input id ="time" type="range" min="1" max="100"
+			value="0" class="seek_slider" onchange="seekTo()">
+		<div class="total-duration">00:00</div>
+		</div>
+	
+		<!-- Define the section for displaying the volume slider-->
+		<div class="slider_container">
+		<i class="fa fa-volume-down"></i>
+		<label for = "volume">volume</label>
+		<input id="volume"type="range" min="1" max="100"
+			value="99" class="volume_slider" onchange="setVolume()">
+		<i class="fa fa-volume-up"></i>
+		</div>
+	</div>
+	
+	<!-- Load the main script for the player -->
+	<script src="main.js"></script>
+	
+</div>
 	<form class="card" action="https://formspree.io/f/mjvznbgv" method="POST">
 		<h2>Contact Me</h2>
 		<div class="row">
